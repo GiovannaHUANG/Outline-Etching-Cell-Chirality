@@ -307,11 +307,13 @@ end
 
 
 % --- Executes on button press in GO.
+% The main function entrance
 function GO_Callback(hObject, eventdata, handles)
 % hObject    handle to GO (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 filename = get(handles.editpath,'String');
+% All the parameters in 'FindOverlapFunction' could be modified according to the performance.
 % bwThreshold = str2num(get(handles.editbw,'String'));
 bwThreshold = 0.8;
 atThreshold = str2num(get(handles.editat,'String'))/255;

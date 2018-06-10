@@ -49,7 +49,8 @@ newAllRegion = regionprops(BwOriginal,'all');
 [latentOverlapRegion ifLatentOverlap noOverlapRegion] = SegLatentOverlap(newAllRegion,latentOverlapProportion2);
 
 
-%% divide whole image as 5 region
+%% divide whole image as 5 region to analysis
+%   -----no necessary for the general implementation------
 %   save the information of cell certainly does not have overlap into 'resGroup'
 resCentroid = [noOverlapRegion.Centroid];
 resCentroid = reshape(resCentroid,2,size(resCentroid,2)/2 );
